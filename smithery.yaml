@@ -1,0 +1,15 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - allowedDirectory
+    properties:
+      allowedDirectory:
+        type: string
+        description: Absolute path the MCP server should have access to
+  commandFunction: |
+    (config) => ({
+      command: "node",
+      args: ["/app/dist/index.js", config.allowedDirectory]
+    })
