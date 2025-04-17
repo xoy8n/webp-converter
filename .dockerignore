@@ -1,0 +1,21 @@
+# Node
+node_modules
+npm-debug.log
+.yarn
+.pnpm-store
+
+# OS/Editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode
+.idea
+
+# Git
+.git
+.gitignore
+
+# Build output
+dist
+coverage
+

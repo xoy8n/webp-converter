@@ -14,4 +14,4 @@ COPY . .
 RUN npm run build
 
 # 서버 실행
-CMD ["node", "/app/dist/index.js"] 
+CMD ["node", "/dist/index.js"] 
