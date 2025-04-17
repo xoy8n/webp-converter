@@ -1,24 +1,17 @@
-FROM node:22.12-alpine AS builder
+FROM node:18-alpine
 
+# 작업 디렉토리 생성
 WORKDIR /app
 
+# 패키지 파일 복사 및 의존성 설치
+COPY package*.json ./
+RUN npm install
+
+# 소스 코드 복사
 COPY . .
 
-RUN --mount=type=cache,target=/root/.npm npm install
+# TypeScript 빌드
+RUN npm run build
 
-RUN --mount=type=cache,target=/root/.npm-production npm ci --ignore-scripts --omit-dev
-
-
-FROM node:22-alpine AS release
-
-WORKDIR /app
-
-COPY --from=builder /app/dist /app/dist
-COPY --from=builder /app/package.json /app/package.json
-COPY --from=builder /app/package-lock.json /app/package-lock.json
-
-ENV NODE_ENV=production
-
-RUN npm ci --ignore-scripts --omit-dev
-
-ENTRYPOINT ["node", "/app/dist/index.js"]
+# 서버 실행
+CMD ["node", "dist/index.js"] 
