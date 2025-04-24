@@ -21,7 +21,7 @@ npx -y @xoy8n/webp-converter@latest
 ```json
 {
   "mcpServers": {
-    "mcp-test": {
+    "webp-converter": {
       "command": "npx",
       "args": ["-y", "@xoy8n/webp-converter"]
     }
