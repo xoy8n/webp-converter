@@ -1,22 +1,22 @@
-# WebP 변환 MCP 서버
+# WebP Conversion MCP Server
 
-이 프로젝트는 이미지 파일을 WebP 형식으로 변환하는 Model Context Protocol(MCP) 서버입니다.
+This project is a Model Context Protocol (MCP) server that converts image files to WebP format.
 
-## 기능
+## Features
 
-- PNG, JPG, JPEG 파일을 WebP로 변환
-- 단일 이미지 또는 여러 이미지 일괄 변환 지원
-- 품질 및 무손실 압축 옵션 설정 가능
-- 원본 파일 유지 옵션
-- 변환 결과 상세 리포트 제공
+- Convert PNG, JPG, and JPEG files to WebP
+- Support for single image or batch image conversion
+- Option to configure quality and lossless compression
+- Option to keep original files
+- Provides a detailed report of the conversion result
 
-### 설치 및 실행
+### Installation & Execution
 
 ```bash
 npx -y @xoy8n/webp-converter@latest
 ```
 
-### Cursor의 mcp.json 설정
+### Cursor mcp.json Configuration
 
 ```json
 {
@@ -29,49 +29,49 @@ npx -y @xoy8n/webp-converter@latest
 }
 ```
 
-## MCP 도구 목록
+## MCP Tool List
 
 ### 1. convert_to_webp
 
-단일 이미지 파일을 WebP로 변환합니다.
+Converts a single image file to WebP format.
 
 **매개변수:**
 
-- `image_path`: 변환할 이미지 파일 경로
-- `base_path`: 기준 디렉토리 경로
-- `quality`: WebP 품질 설정 (기본값: 80)
-- `lossless`: 무손실 압축 여부 (기본값: false)
-- `keep_original`: 원본 파일 유지 여부 (기본값: false)
+- `image_path`: Path to the image file to convert
+- `base_path`: Base directory path
+- `quality`: WebP quality setting (default: 80)
+- `lossless`: Whether to use lossless compression (default: false)
+- `keep_original`: Whether to retain the original file (default: false)
 
-**반환값:**
+**Returns:**
 
-- 변환 성공 여부
-- 입력/출력 파일 경로
-- 변환 전/후 파일 크기
-- 적용된 품질 및 압축 설정
+- Conversion success status
+- Input/output file paths
+- File size before/after conversion
+- Applied quality and compression settings
 
 ### 2. batch_convert_to_webp
 
-여러 이미지 파일을 한 번에 WebP로 변환합니다.
+Converts multiple image files to WebP format in one go.
 
-**매개변수:**
+**Parameters:**
 
-- `image_paths`: 변환할 이미지 파일 경로 배열
-- `base_path`: 기준 디렉토리 경로 (선택사항)
-- `quality`: WebP 품질 설정 (기본값: 80)
-- `lossless`: 무손실 압축 여부 (기본값: false)
-- `keep_original`: 원본 파일 유지 여부 (기본값: false)
+- `image_paths`: Array of paths to image files to convert
+- `base_path`: Base directory path (optional)
+- `quality`: WebP quality setting (default: 80)
+- `lossless`: Whether to use lossless compression (default: false)
+- `keep_original`: Whether to retain the original files (default: false)
 
-**반환값:**
+**Returns:**
 
-- 각 이미지 파일에 대한 변환 결과 배열
+- Array of conversion results for each image file
 
-## 사용 방법
+## How to Use
 
-1. 변환하려는 이미지 파일 선택
-2. MCP 도구를 통해 `convert_to_webp` 또는 `batch_convert_to_webp` 명령어 실행
-3. 변환 결과 확인
+1. Select the image files you want to convert.
+2. Run the `convert_to_webp` or `batch_convert_to_webp` command via the MCP tools.
+3. Check the conversion results.
 
-## 라이센스
+## License
 
 MIT
