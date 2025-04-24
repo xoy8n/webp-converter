@@ -23,7 +23,7 @@ npx -y @xoy8n/webp-converter@latest
   "mcpServers": {
     "webp-converter": {
       "command": "npx",
-      "args": ["-y", "@xoy8n/webp-converter"]
+      "args": ["-y", "@xoy8n/webp-converter@latest"]
     }
   }
 }
