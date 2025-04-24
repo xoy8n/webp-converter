@@ -35,7 +35,7 @@ npx -y @xoy8n/webp-converter@latest
 
 Converts a single image file to WebP format.
 
-**매개변수:**
+**Parameters:**
 
 - `image_path`: Path to the image file to convert
 - `base_path`: Base directory path
