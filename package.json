@@ -1,0 +1,38 @@
+{
+  "name": "@xoy8n/webp-converter",
+  "version": "1.0.5",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "webp-converter": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/*.js",
+    "start": "node dist/index.js",
+    "prepare": "npm run build",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "publish-patch": "npm version patch && npm run build && npm publish --access public"
+  },
+  "keywords": [
+    "mcp",
+    "webp",
+    "image",
+    "conversion"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "nodemon": "^3.0.3",
+    "sharp": "^0.33.2",
+    "shx": "^0.3.4",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "typescript": "^5.3.3"
+  }
+}
