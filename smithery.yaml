@@ -1,10 +1,8 @@
 startCommand:
   type: stdio
-  configSchema:
-    type: object
-    properties: {}
+  configSchema: {} # JSON Schema for configuration options
   commandFunction: |
     (config) => ({
-      command: "node",
-      args: ["dist/index.js"]
+      "command": "node",
+      "args": ["dist/index.js"],
     })
