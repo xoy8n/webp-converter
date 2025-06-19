@@ -43,7 +43,7 @@ server.tool(
   'batch_convert_to_webp',
   {
     image_paths: z.array(z.string()),
-    quality: z.number().default(80),
+    quality: z.number().default(95),
     lossless: z.boolean().default(false),
     keep_original: z.boolean().default(false),
     base_path: z.string().optional(),

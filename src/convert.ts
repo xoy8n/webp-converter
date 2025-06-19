@@ -1,13 +1,13 @@
-import * as fs from "fs";
-import * as path from "path";
-import sharp from "sharp";
+import * as fs from 'fs';
+import * as path from 'path';
+import sharp from 'sharp';
 
 /**
  * 이미지 파일을 WebP 형식으로 변환합니다.
  */
 export async function convertToWebP(
   imagePath: string,
-  quality: number = 80,
+  quality: number = 95,
   lossless: boolean = false,
   keepOriginal: boolean = false,
   basePath: string = process.cwd()
@@ -23,7 +23,7 @@ export async function convertToWebP(
 
     // 이미지 확장자 확인
     const ext = path.extname(absolutePath).toLowerCase();
-    if (![".png", ".jpg", ".jpeg"].includes(ext)) {
+    if (!['.png', '.jpg', '.jpeg'].includes(ext)) {
       throw new Error(`지원되지 않는 이미지 형식입니다: ${ext}`);
     }
 
