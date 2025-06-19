@@ -39,7 +39,7 @@ Converts a single image file to WebP format.
 
 - `image_path`: Path to the image file to convert
 - `base_path`: Base directory path
-- `quality`: WebP quality setting (default: 80)
+- `quality`: WebP quality setting (default: 95)
 - `lossless`: Whether to use lossless compression (default: false)
 - `keep_original`: Whether to retain the original file (default: false)
 
@@ -58,7 +58,7 @@ Converts multiple image files to WebP format in one go.
 
 - `image_paths`: Array of paths to image files to convert
 - `base_path`: Base directory path (optional)
-- `quality`: WebP quality setting (default: 80)
+- `quality`: WebP quality setting (default: 95)
 - `lossless`: Whether to use lossless compression (default: false)
 - `keep_original`: Whether to retain the original files (default: false)
 
