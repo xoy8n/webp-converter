@@ -72,6 +72,8 @@ Converts multiple image files to WebP format in one go.
 2. Run the `convert_to_webp` or `batch_convert_to_webp` command via the MCP tools.
 3. Check the conversion results.
 
+[![MCP Badge](https://lobehub.com/badge/mcp-full/xoy8n-webp-converter?theme=light)](https://lobehub.com/mcp/xoy8n-webp-converter)
+
 ## License
 
 MIT
